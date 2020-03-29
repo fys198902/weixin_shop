@@ -1,13 +1,3 @@
-//app.js
-// var util = require('../../utils/util.js')
-//< wxs module = "utils" src = "../../utils/utils.wxs" ></wxs >
-// app.sendgeturl('', '', function(data){
-//   console.log(data)
-// })
-
-
-
-
 App({
   onLaunch: function () {
     var that = this;
