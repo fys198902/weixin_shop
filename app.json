@@ -20,7 +20,8 @@
     "pages/daishenheshangjia/daishenheshangjia",
     "pages/addguanli/addguanli",
     "pages/addguanli/addguanlido",
-    "pages/dianpu/dianpu"
+    "pages/dianpu/dianpu",
+    "pages/shouquan/shouquan"
   ],
   "window": {
     "backgroundTextStyle": "light",

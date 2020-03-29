@@ -1,0 +1,6 @@
+<view style="padding: 5px">
+  <view style="border: 1px dashed #67C23A;font-size: 12px; text-align: center;padding: 10px; margin-top: 20px; margin-bottom: 30px">
+    {{sessionkey}}
+  </view>
+  <van-button type="info" size='small' block bind:click="copy">点击将SessionKey复制到公众号</van-button>
+</view>

@@ -129,7 +129,7 @@ Page({
     this.upload(e, function(res){
       res = JSON.parse(res.data);
       that.setData({
-        zhaopaiimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        zhaopaiimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },
@@ -139,7 +139,7 @@ Page({
     this.upload(e, function (res) {
       res = JSON.parse(res.data);
       that.setData({
-        zhaopaiimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        zhaopaiimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },
@@ -149,7 +149,7 @@ Page({
     this.upload(e, function (res) {
       res = JSON.parse(res.data);
       that.setData({
-        shenfenzhengzhengimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        shenfenzhengzhengimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },
@@ -159,7 +159,7 @@ Page({
     this.upload(e, function (res) {
       res = JSON.parse(res.data);
       that.setData({
-        shenfenzhengfanimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        shenfenzhengfanimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },
@@ -169,7 +169,7 @@ Page({
     this.upload(e, function (res) {
       res = JSON.parse(res.data);
       that.setData({
-        yingyezhizhaoimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        yingyezhizhaoimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },
@@ -179,7 +179,7 @@ Page({
     this.upload(e, function (res) {
       res = JSON.parse(res.data);
       that.setData({
-        shipinjingyingxukezhengimg: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+        shipinjingyingxukezhengimg: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
       })
     })
   },

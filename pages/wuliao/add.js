@@ -51,7 +51,7 @@ Page({
       success(res) {
         res = JSON.parse(res.data);
         that.setData({
-          fengmian: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src
+          fengmian: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
         });
       }
     });
@@ -67,7 +67,7 @@ Page({
       success(res) {
         res = JSON.parse(res.data);
         that.data.wuliaoentry.push({
-          url: 'https://jxc.xmoj.cn/uploads/qingdao/' + res.src,
+          url: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src,
           isImage: true
         });
         that.setData({ 

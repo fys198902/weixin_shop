@@ -8,7 +8,6 @@ Page({
       avatarUrl: ''
     },
     isguanli: true,
-    imageURL: 'https://img.yzcdn.cn/vant/cat.jpeg',
     showgetuserinfo: false,
     searchval: '',
     xianshi_show: false,
@@ -46,8 +45,8 @@ Page({
     time: 0,
     timeData: {},
     lunboimg: [
-      '../images/peisong.png',
-      '../images/qingdaopijiu.png',
+      '../images/shouye_lunbo1.png',
+      '../images/shouye_lunbo2.png',
     ],
   },
 
@@ -380,7 +379,7 @@ Page({
   goshuiguo(){
     this.setData({
       activemenu: 1,
-      leibie_leibie_active: 3,
+      leibie_leibie_active: 2,
       leibie_entry_active: 0,
     })
   },
@@ -464,7 +463,7 @@ Page({
   
   gettongzhi(){
     wx.navigateTo({
-      url: '/pages/tongzhi/tongzhi',
+      url: '/pages/shouquan/shouquan',
     })
   },
 

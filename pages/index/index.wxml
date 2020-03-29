@@ -68,14 +68,14 @@
       <view class="huidongzhuanti">活动专题</view>
       <view class="row zhuanti">
         <view class="zhuanti_left" bindtap="gowaimai">
-          <image src="../images/pijiu.jpg" mode="scaleToFill" style="width: 100%; height: 100%"></image>
+          <image src="../images/shouye_datu1.png" mode="scaleToFill" style="width: 100%; height: 100%"></image>
         </view>
         <view class="column zhuanti_right">
           <view class="right_top" bindtap="goshucai">
-            <image src="../images/baijiu.jpg" mode="scaleToFill" style="width: 100%; height: 100%"></image>
+            <image src="../images/shouye_datu2.png" mode="scaleToFill" style="width: 100%; height: 100%"></image>
           </view>
           <view class="right_bottom" bindtap="goshuiguo">
-            <image src="../images/yinliao.jpg" mode="scaleToFill" style="width: 100%; height: 100%"></image>
+            <image src="../images/shouye_datu3.png" mode="scaleToFill" style="width: 100%; height: 100%"></image>
           </view>
         </view>
       </view>
@@ -175,7 +175,7 @@
       </van-button>
     </view>
     <van-submit-bar custom-class="bottommenu" price="{{ yixuanjine }}" button-text="立即购买" bind:submit="gouwuchegoumai" tip="{{ true }}">
-      <view slot="tip"></view>
+      <view slot="tip">点餐当日送达，蔬菜、水果、海鲜、肉类次日送到（晚10点前下单）</view>
     </van-submit-bar>
   </view>
   <!-- 我的 -->

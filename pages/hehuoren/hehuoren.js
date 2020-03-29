@@ -107,7 +107,7 @@ Page({
       success(res) {
         wx.hideLoading()
         that.setData({
-          imgurl: 'https://jxc.xmoj.cn' + '/uploads/qingdao/' + res.data.replace(/"/g, '')
+          imgurl: 'https://jxc.xmoj.cn' + '/uploads/zhao/' + res.data.replace(/"/g, '')
         })
       }
     });
@@ -160,22 +160,17 @@ Page({
           src: app.globalData.root_url + '/index/fgetxiaochengxuma?sessionkey=' + wx.getStorageSync('sessionkey'),
           success: function(res1) {
             erweima = res1.path
-            var newheight = that.data.widthview * res.height / res.width;
-            that.setData({
-              heightview: newheight
-            })
-            fcanvat.drawImage(backimg, 0, 0, that.data.widthview, newheight);
-            var kuandu = newheight * 136 / 480
-            fcanvat.drawImage(erweima, that.data.widthview / 2 - kuandu / 2, newheight * 296 / 480, kuandu, kuandu);
+            fcanvat.drawImage(backimg, 0, 0, 400, 720);
+            fcanvat.drawImage(erweima, 46, 720 - 143, 110, 110);
             fcanvat.draw()
-            setTimeout(function() {
+            setTimeout(function () {
               wx.canvasToTempFilePath({
                 x: 0,
                 y: 0,
-                width: that.data.widthview,
-                height: that.data.heightview,
-                destWidth: that.data.widthview,
-                destHeight: that.data.heightview,
+                width: 400,
+                height: 720,
+                destWidth: 400,
+                destHeight: 720,
                 canvasId: 'mycanvat',
                 success(res) {
                   that.setData({
@@ -184,7 +179,7 @@ Page({
                   wx.hideLoading()
                   wx.saveImageToPhotosAlbum({
                     filePath: res.tempFilePath,
-                    success: function(res) {
+                    success: function (res) {
                       wx.showModal({
                         title: '提示',
                         showCancel: false,

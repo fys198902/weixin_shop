@@ -48,13 +48,14 @@
 
     <view style="margin-top: 20px; padding: 5px">
       <van-button plain hairline type="danger" block size="normal" bind:click="gettuiguang">获取专属推广素材</van-button>
-      <view style="margin-top: 20px;margin-bottom: 50px; position:fixed;left:9000px;">
-        <canvas canvas-id="mycanvat" style="width: {{widthview}}px; height: {{heightview}}px"></canvas>
-      </view>
     </view>
 
-    <view style="margin-top: 10px;width: 100%">
-      <image src="{{lujing}}" style="width: {{widthview}}px;height: {{heightview}}px" mode="aspectFit"></image>
+    <view style="margin-top: 10px; padding: 5px">
+      <image src="{{lujing}}" style="width: 100%;" mode="widthFix"></image>
+    </view>
+
+    <view style="margin-top: 20px;margin-bottom: 50px; position:fixed;left:9000px;">
+      <canvas canvas-id="mycanvat" style="width: 400px; height: 720px"></canvas>
     </view>
   </view>
 
