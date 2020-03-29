@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button",
+    "van-icon": "@vant/weapp/icon"
+  },
+  "navigationBarTitleText": "合伙人审核"
+}

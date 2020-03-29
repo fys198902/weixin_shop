@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item"
+  },
+  "navigationBarTitleText": "待审核商家"
+}

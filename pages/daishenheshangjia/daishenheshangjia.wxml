@@ -1,0 +1,56 @@
+<view class="page">
+  <block wx:if="{{dianpuinfo.length > 0}}" wx:for="{{dianpuinfo}}" wx:key="id">
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="{{item.dianpuname}}" name="{{index}}">
+        <view class="column" style="margin-top: 10px;background-color: white">
+          <view style="padding: 5px">地址：{{item.dianpudizhi}}</view>
+          <view style="padding: 5px">主营业务：{{item.dianpuzhuying}}</view>
+          <view style="padding: 5px">联系人：{{item.lianxr}}</view>
+          <view style="padding: 5px;color: #ed4014" bindtap="boda" data-phone="{{item.lianxfs}}">联系方式：{{item.lianxfs}}</view>
+          <view class="column" style="padding: 5px;border: 1px solid #ed4014; margin-top: 5px">
+            <view style="text-align:center;background-color: #ed4014; color: white; padding: 5px 0px 5px 0px">店铺招牌</view>
+            <view style="margin-top: 5px;">
+              <van-image width="{{vw_width - 40}}" height="{{vw_width - 40}}" src="{{item.dianpuzhaopai}}" data-src="{{item.dianpuzhaopai}}" bind:click="yulan"/>
+            </view>
+          </view>
+
+          <view class="column" style="padding: 5px;border: 1px solid #ed4014; margin-top: 5px">
+            <view style="text-align:center;background-color: #ed4014; color: white; padding: 5px 0px 5px 0px">法人身份证正面</view>
+            <view style=" margin-top: 5px">
+              <van-image width="{{vw_width - 40}}" height="{{vw_width - 40}}" src="{{item.farenshenfenzheng_zheng}}" data-src="{{item.farenshenfenzheng_zheng}}" bind:click="yulan" />
+            </view>
+          </view>
+
+          <view class="column" style="padding: 5px;border: 1px solid #ed4014; margin-top: 5px">
+            <view style="text-align:center;background-color: #ed4014; color: white; padding: 5px 0px 5px 0px">法人身份证反面</view>
+            <view style="margin-top: 5px">
+              <van-image width="{{vw_width - 40}}" height="{{vw_width - 40}}" src="{{item.farenshenfenzheng_fan}}" data-src="{{item.farenshenfenzheng_fan}}" bind:click="yulan" />
+            </view>
+          </view>
+
+          <view class="column" style="padding: 5px;border: 1px solid #ed4014; margin-top: 5px">
+            <view style="text-align:center;background-color: #ed4014; color: white; padding: 5px 0px 5px 0px">营业执照</view>
+            <view style="margin-top: 5px">
+              <van-image width="{{vw_width - 40}}" height="{{vw_width - 40}}" src="{{item.yingyezhizhao}}" data-src="{{item.yingyezhizhao}}" bind:click="yulan" />
+            </view>
+          </view>
+
+          <view class="column" style="padding: 5px;border: 1px solid #ed4014; margin-top: 5px">
+            <view style="text-align:center;background-color: #ed4014; color: white; padding: 5px 0px 5px 0px">食品经营许可证</view>
+            <view style="margin-top: 5px">
+              <van-image width="{{vw_width - 40}}" height="{{vw_width - 40}}" src="{{item.shipinjingyingxukezheng}}" data-src="{{item.shipinjingyingxukezheng}}" bind:click="yulan" />
+            </view>
+          </view>
+        </view>
+        <view class="row" style="justify-content: space-between; padding: 10px; margin-bottom: 10px">
+          <van-button type="warning" size="small" bind:click="jujue" data-id="{{item.id}}" data-index="{{index}}">拒绝</van-button>
+          <van-button type="primary" size="small" bind:click="tongyi" data-id="{{item.id}}" data-index="{{index}}">同意</van-button>
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+  </block>
+
+  <view wx:if="{{dianpuinfo.length == 0}}" style="background-color: white">
+    <view style="text-align: center; margin-top: 50px; color: #ccc;">暂无申请</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+/* pages/hehuoren/hehuoren.wxss */
+
+.btnclass{
+  width: 100vw;
+}
+
+.jine{
+  color: #ed4014;
+  font-size: 14px;
+}

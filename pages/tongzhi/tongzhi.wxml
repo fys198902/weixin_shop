@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="row" style="align-items: center;background-color: white;padding: 5px;justify-content: flex-start; flex-wrap: wrap;">
+    <block wx:for="{{tongzhi}}" wx:key="tongzhiid">
+      <view class="column tongzhi_column" data-id="{{item.tongzhiid}}" bindtap="gettongzhi">
+        <van-icon name="chat-o" color="#409EFF" size="36px" />
+        <view style="font-size: 11px">{{item.tongzhiname}}</view>
+      </view>
+    </block>
+  </view>
+</view>

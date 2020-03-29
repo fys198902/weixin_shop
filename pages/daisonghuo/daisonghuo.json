@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-icon": "@vant/weapp/icon",
+    "van-button": "@vant/weapp/button"
+  },
+  "navigationBarTitleText": "订单状态"
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-switch": "@vant/weapp/switch",
+    "van-search": "@vant/weapp/search",
+    "van-icon": "@vant/weapp/icon",
+    "van-loading": "@vant/weapp/loading"
+  },
+  "navigationBarTitleText": "通知授权"
+}

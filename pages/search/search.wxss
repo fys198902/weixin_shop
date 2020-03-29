@@ -1,0 +1,10 @@
+/* pages/search/search.wxss */
+.leibie_add{
+  position: relative;
+  margin-right: 5px;
+}
+
+.jine{
+  color: #ed4014;
+  font-size: 14px;
+}

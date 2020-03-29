@@ -1,0 +1,21 @@
+<view class="page">
+  <block wx:if="{{fdata.length > 0}}" wx:for="{{fdata}}" wx:key="id">
+    <view class="column" style="margin-top: 5px; background-color: white; padding: 10px">
+      <view>{{item.xingm}}</view>
+      <view style="margin-top: 5px" data-phone="{{item.fphone}}" bindtap="bodadianhua">
+        <van-icon name="phone-o" color="#ed4014" style="margin-top: 8px"/>
+        {{item.fphone}}
+      </view>
+      <text style="font-size: 12px; color: #909399; margin-top: 5px">{{item.jingzhengyoushi}}</text>
+      <image style="width: 95vw;" mode="widthFix" src="{{item.shoukuanma}}"></image>
+      <view class="row" style="justify-content: space-between; padding: 30px 10px 30px 10px">
+          <van-button type="danger" size="small" bind:click="setfenxiaostatus" data-id="{{item.id}}" data-status="3">拒绝</van-button>
+          <van-button type="primary" size="small" bind:click="setfenxiaostatus" data-id="{{item.id}}" data-status="2">同意</van-button>
+      </view>
+    </view>
+  </block>
+
+  <view wx:if="{{fdata.length == 0}}" style="color: #ccc; margin-top: 50px; text-align: center;background-color: white">
+    暂无申请
+  </view>
+</view>

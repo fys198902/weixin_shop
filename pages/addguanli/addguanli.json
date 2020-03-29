@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-loading": "@vant/weapp/loading"
+  },
+  "navigationBarTitleText": "增设管理员"
+}

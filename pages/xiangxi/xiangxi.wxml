@@ -1,0 +1,56 @@
+<view class="page">
+  <!-- position: fixed;left: 9999px -->
+  <canvas canvas-id='fenxiang' style="width:600px; height: 600px; position: fixed;left: 9999px"></canvas>
+  <view class="fenxiang" style="top: {{vw_width + 30}}px">
+    <button open-type="share" class="empty" style="font-size: 12px; color: white; padding: 0;margin: 0">分享</button>
+  </view>
+  <view class="fenxiang" style="top: {{vw_width + 60}}px;color:white;font-size: 12px;width: 42px;padding-left: 10px" bindtap="fenxiangpengyouquan">朋友圈</view>
+  <view style="padding: 5px; background-color: white">
+    <van-image width="100%" height="{{vw_width - 10}}px" src="{{wuliao.wuliaoimg}}" />
+  </view>
+
+  <view class="column" style="margin-top: 5px; background-color: white; padding-left: 10px">
+    <view class="tital">{{wuliao.wuliaoname}}</view>
+    <view class="row" style="justify-content: flex-start;">
+      <van-tag plain type="warning">热销</van-tag>
+      <van-tag plain type="warning" style="margin-left: 10px">推荐</van-tag>
+    </view>
+    <view class="column" style="margin-top: 10px">
+      <view class="jine">￥{{wuliao.shoujia}}元/{{wuliao.danwei}}</view>
+      <view class="jianjie">{{wuliao.jianjie}}</view>
+    </view>
+    <view class="row" style="justify-content: flex-end; padding-bottom: 10px">
+      <van-stepper value="{{ goumaishul }}" bind:change="changegoumaishul" button-size="20px" />
+    </view>
+  </view>
+
+  <view class="column" style="background-color: white; margin-top: 5px; margin-bottom: 5x" bindtap="godianpu">
+    <view class="row" style="justify-content: center;align-items: center;text-align: center; padding: 15px 0px 15px 0px; font-size: 13px">
+      <van-image round width="24" height="24" src="{{wuliao.dianpu.dianpuzhaopai}}" />
+      <view style="margin-left: 10px">{{wuliao.dianpu.dianpuname}}</view>
+      <van-icon name="arrow" custom-style="margin-left: 20px" />
+    </view>
+  </view>
+
+  <view class="column" style="background-color: white; margin-top: 5px; margin-bottom: 80px">
+    <view style="text-align: center; padding-top: 15px; font-size: 13px">商品详情</view>
+    <van-divider />
+    <view style="padding: 0px 5px 10px 5px">
+      <view wx:if="{{wuliao.entry.length > 0}}" wx:for="{{wuliao.entry}}" wx:key="id">
+        <image src="{{item.wuliaoentryimg}}" style="width: {{vw_width - 10}}px" mode="widthFix"></image>
+      </view>
+
+      <view wx:if="{{wuliao.entry.length == 0}}">
+        <view style="margin-top: 50px; margin-bottom: 20px; text-align: center; color: #ccc">暂无详情图片</view>
+      </view>
+    </view>
+  </view>
+
+  <van-goods-action>
+    <van-goods-action-icon info="{{ gouwucheshul }}" icon="cart-o" text="购物车" bind:click="gogouwuche" />
+    <van-goods-action-icon icon="shop-o" bind:click="godianpu" text="店铺" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="addgouwuche" />
+    <van-goods-action-button text="立即购买" bind:click="lijigoumai" />
+  </van-goods-action>
+
+</view>

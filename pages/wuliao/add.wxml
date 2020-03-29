@@ -1,0 +1,31 @@
+<view class="page">
+  <van-popup show="{{ showleibie }}" position="bottom" custom-style="height: 20%" custom-style="height: 280px;" bind:click-overlay="yincang">
+    <van-picker show-toolbar title="标题" columns="{{ columns }}" bind:change="onChange" bind:cancel="yincang" bind:confirm="queding" />
+  </van-popup>
+
+  <van-cell-group>
+    <van-field value="{{ selectedleibie }}" required label="商品类别" placeholder="请点击后选择" border="{{ true }}" bindtap="show" readonly />
+    <van-field value="{{ wuliaoname }}" label="商品名称" required placeholder="请输入商品名称" border="{{ true }}" bind:change="wuliaonameinput" />
+    <van-field value="{{ jianjie }}" type="textarea" required autosize label="商品简介" placeholder="请输入商品简介" border="{{ true }}" bind:change="jianjieinput" />
+    <van-field value="{{ danwei }}" label="商品单位" required placeholder="请输入商品单位" border="{{ true }}" bind:change="danweiinput" />
+    <van-field value="{{ shoujia }}" type="digit" required label="商品售价" placeholder="请输入商品售价" border="{{ true }}" bind:change="shoujiainput" />
+    <van-field value="{{ ticheng }}" type="digit" required label="分销提成" placeholder="请输入分销提成" border="{{ true }}" bind:change="tichenginput" />
+  </van-cell-group>
+  <view>
+    <van-uploader file-list="{{ fengmian.url }}" bind:after-read="uploadfengmian">
+      <view style="width: 100%; text-align: center; padding: 5px 0px 5px 0px;">
+        <van-button icon="photo" type="primary" size="small" custom-class="btnclass">点击上传商品主图</van-button>
+      </view>
+    </van-uploader>
+  </view>
+  <view style="width:{{vw_width}}px;heigth: {{vw_width}}px; margin-top: 5px">
+    <van-image width="{{vw_width}}" height="{{vw_width}}" src="{{fengmian}}" />
+  </view>
+
+  <view style="margin-top: 5px; background-color: white; padding: 5px">
+    <view style="margin-bottom: 10px; text-align: center; font-szie: 12px;">上传商品详情图片</view>
+    <van-uploader file-list="{{ wuliaoentry }}" deletable bind:after-read="afterRead" bind:delete="delwuliaoentry" />
+  </view>
+
+  <van-button icon="photo" type="primary" size="small" custom-class="savebtn" bind:click="save">保存</van-button>
+</view>

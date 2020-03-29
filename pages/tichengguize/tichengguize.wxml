@@ -1,0 +1,10 @@
+<view class="page">
+  <block wx:for="{{fdata}}" wx:key="id">
+    <view class="row" style="margin-top: 5px;background-color: white; justify-content: space-between; padding: 10px;">
+      <view>{{item.wuliaoname}}</view>
+      <view style="color: #ed4014">{{item.danjianticheng}}元/{{item.danwei}}</view>
+    </view>
+  </block>
+
+  <view style="color: #ed4014; text-align: center; width: 100%; margin-top: 30px; margin-bottom: 30px; padding: 10px; background-color: white">满100元，即可提现</view>
+</view>

@@ -1,0 +1,56 @@
+<view class="page">
+  <van-search value="{{ searchval }}" bind:change="searchwuliao" placeholder="请输入搜索关键词" focus="true" />
+  <block wx:if="{{wuliaolist.length > 0}}" wx:for="{{wuliaolist}}" wx:key="id">
+    <view class="row" style="margin: 5px 10px 5px 10px; padding: 0; background-color: white; border: 1px solid #ccc; width: {{vw_width - 20}}px;height: 108px">
+          <van-image width="108px" height="108px" lazy-load vertical data-id="{{item.id}}" bind:click="goxiangxi" src="{{item.wuliaoimg}}" />
+          <view class="column" style="justify-content: space-between; width: 100%">
+            <view style="margin-left: 10px; margin-top: 5px">
+              <view class="row" style="justify-content: space-between;">
+                <view style="font-size: 13px; color: #303133">{{item.wuliaoname}}</view>
+              </view>
+              <view class="hang" style="font-size: 10px;color: #ccc">{{item.dianpuname}}</view>
+              <view style="font-size: 13px; color: #909399; height: 28px; font-size: 12px; overflow: hidden; padding: 5px 5px 5px 0px; margin-bottom: 10px">{{item.jianjie}}</view>
+              <view class="leibie_add" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <view class="jine">￥{{item.shoujia}}元/{{item.danwei}}</view>
+                <van-icon name="add" data-wuliaoimg="{{item.wuliaoimg}}" data-id="{{item.id}}" data-shoujia="{{item.shoujia}}" data-jianjie="{{item.jianjie}}" data-wuliaoname="{{item.wuliaoname}}" data-danwei="{{item.danwei}}" bind:click="showgouwuche" color="#19be6b"
+                    size="20px" />
+              </view>
+            </view>
+          </view>
+        </view>
+  </block>
+
+  <view wx:if="{{wuliaolist.length == 0}}" class="column" style="align-items: center;background-color: white; padding-top: 30px">
+    <van-icon name="search" size="180px" color="#cdcdcd"/>
+    <text style="color: #cdcdcd; text-align: center">暂无商品，请搜索</text>
+  </view>
+
+
+  <!-- 临时购买窗口 -->
+  <van-popup show="{{ addgouwuche_show }}" position="bottom" bind:close="addgouwuche_close">
+    <view class="column">
+      <view class="row" style="padding: 10px 5px 0px 10px;">
+        <van-image width="90" height="90" src="{{addgouwuche.imgurl}}" class="gouwuche_img" />
+        <view class="column" style="padding: 5px 0px 5px 10px">
+          <view style="font-size: 15px; color: #303133">{{addgouwuche.wuliaoname}}</view>
+          <view style="font-size: 13px; color: #909399; height:28px; font-size: 12px; overflow: hidden; padding: 5px 5px 5px 0px;">{{addgouwuche.jianjie}}</view>
+          <view class="jine" style="margin-top: 12px">￥{{addgouwuche.shoujia}}元</view>
+        </view>
+      </view>
+
+      <van-divider />
+      <view class="row" style="margin-bottom: 64px;align-items: center; justify-content: space-between; padding: 5px">
+        <text style="font-size: 15px; color: #303133">购买数量</text>
+        <van-stepper value="{{ goumaishul }}" bind:change="changegouwucheshul" button-size="21px" />
+      </view>
+    </view>
+    <van-goods-action>
+      <van-goods-action-icon icon="cart-o" text="购物车" bind:click="gogouwuche" info="{{gouwucheitemshul}}" />
+      <van-goods-action-icon icon="shop-o" bind:click="gozhuye" text="首页" />
+      <van-goods-action-button text="加入购物车" bind:click="addgouwuche" type="warning" />
+      <van-goods-action-button text="立即购买" bind:click="lijigoumai" />
+    </van-goods-action>
+  </van-popup>
+  
+</view>
+

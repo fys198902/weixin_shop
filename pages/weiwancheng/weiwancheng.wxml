@@ -1,0 +1,48 @@
+<view class="page">
+  <wxs module="utils" src="../../utils/utils.wxs"></wxs>
+  <block wx:if="{{fdata.length > 0}}" wx:for="{{fdata}}" wx:key="id">
+    <view class="column" style="background-color: #f8f8f9; white; margin: 5px">
+      <view style="padding: 5px; background-color: white;" class="column">
+        <view>{{utils.rightjiequ(item.jiaoyi_orderid)}}</view>
+        <view style="font-size: 12px; color: #ccc">{{item.peisongdizhi}}</view>
+        <view style="font-size: 12px; color: #ccc">{{item.lianxfs}}</view>
+      </view>
+      <view class="column" style="padding: 5px; background-color: white;">
+        <block wx:for="{{item.entry}}" wx:for-item="wuliao" wx:key="id">
+          <view class="row" bindtap="goxiangxi" data-id="{{wuliao.wuliao_id}}" style="margin-top: 5px;">
+            <van-image width="96px" height="96px" src="{{wuliao.fengmian}}" />
+            <view class="column" style="width: calc(100% - 100px); justify-content: space-between; padding: 5px">
+              <view style="font-size: 15px">{{wuliao.wuliaoname}}</view>
+              <view style="font-size: 12px; color: #ccc; height: 54px; margin-top: 5px" data-phone="{{wuliao.dianpuinfo.lianxfs}}" bindtap="boda">所属店铺：{{wuliao.dianpuinfo.dianpuname}} - {{wuliao.dianpuinfo.lianxfs}}</view>
+
+              <view class="row" style="justify-content: space-between">
+                <view class="jine">￥{{wuliao.shoujia}}元/{{wuliao.danwei}}</view>
+                <view class="jine">{{wuliao.goumaishul}}{{wuliao.danwei}}</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view wx:if="{{status == 0}}">
+        <view style="margin-top: 5px">
+          <van-button type="danger" size="small" data-index="{{index}}" data-id="{{item.id}}" block bind:click="sendjiaoyi">立即支付</van-button>
+        </view>
+        <view style="margin-top: 10px">
+          <van-button type="info" size="small" data-index="{{index}}" data-id="{{item.id}}" block bind:click="jiaoyidel">删除订单</van-button>
+        </view>
+      </view>
+
+      <view wx:if="{{status == 1}}">
+        <view style="margin-top: 10px">
+          <van-button type="info" size="small" data-index="{{index}}" data-id="{{item.id}}" block bind:click="yisongda">确认收货</van-button>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+  <view wx:if="{{fdata.length == 0}}" style="color: #ccc; margin-top: 50px; text-align: center;background-color: white">
+    暂无数据
+  </view>
+
+</view>

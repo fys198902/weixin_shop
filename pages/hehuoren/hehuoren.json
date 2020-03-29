@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-field": "@vant/weapp/field",
+    "van-button": "@vant/weapp/button",
+    "van-image": "@vant/weapp/image",
+    "van-uploader": "@vant/weapp/uploader"
+  },
+  "navigationBarTitleText": "合伙人"
+}

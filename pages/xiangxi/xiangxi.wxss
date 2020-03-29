@@ -1,0 +1,46 @@
+/* pages/xiangxi/xiangxi.wxss */
+
+.jine {
+  color: #ed4014;
+  font-size: 15px;
+}
+
+.fenxiang {
+  position: fixed;
+  right: 0px;
+  height: 16px;
+  width: 42px;
+  z-index: 999;
+  padding: 2px 0px 3px 5px;
+  border-radius: 100px 0px 0px 100px;
+  background-color: red;
+}
+
+.jianjie {
+  color: #909399;
+  font-size: 12px;
+  overflow: hidden;
+  height: 16px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+button.empty::after {
+  border: none;
+}
+
+.empty.plain {
+  border: none;
+  border-color: transparent;
+}
+
+.empty.button-hover {
+  background-color: transparent;
+}
+
+button.empty {
+  line-height: 40rpx;
+  background-color: transparent;
+  padding-bottom: 20rpx;
+}

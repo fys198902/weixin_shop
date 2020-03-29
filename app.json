@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/xiangxi/xiangxi",
+    "pages/hehuoren/hehuoren",
+    "pages/tongzhi/tongzhi",
+    "pages/daisonghuo/daisonghuo",
+    "pages/weiwancheng/weiwancheng",
+    "pages/hehuorenshenhe/hehuorenshenhe",
+    "pages/peisongdizhi/peisongdizhi",
+    "pages/msgshouquan/msgshouquan",
+    "pages/lianxfs/lianxfs",
+    "pages/tichengguize/tichengguize",
+    "pages/dianyuanshouquan/dianyuanshouquan",
+    "pages/shangpinweihu/shangpinweihu",
+    "pages/wuliao/add",
+    "pages/wuliao/update",
+    "pages/chengweishangjia/chengweishangjia",
+    "pages/daishenheshangjia/daishenheshangjia",
+    "pages/addguanli/addguanli",
+    "pages/addguanli/addguanlido",
+    "pages/dianpu/dianpu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2db7f5",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您的当前位置，用于配送"
+    }
+  },
+
+  "sitemapLocation": "sitemap.json"
+  
+}

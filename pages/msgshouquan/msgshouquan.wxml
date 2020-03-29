@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="column" style="padding: 5px; background-color: white">
+    <image src="{{dianpuinfo.dianpuzhaopai}}" style="width: 100%" mode="widthFix"></image>
+    <view style="font-size: 18px;margin-top: 5px">店名：{{dianpuinfo.dianpuname}}</view>
+    <view style="font-size: 15px;">地址：{{dianpuinfo.dianpudizhi}}</view>
+    <view style="font-size: 15px;">联系人：{{dianpuinfo.lianxr}}</view>
+    <view style="font-size: 15px;">联系方式：{{dianpuinfo.lianxfs}}</view>
+  </view>
+  <block wx:for="{{dianyuan}}" wx:key="id">
+    <view class="row" style="justify-content: space-between;height: 32px; line-height: 32px; padding: 5px; margin-top: 5px;background-color: white">
+      <view class="row" style="height: 32px; line-height: 32px">
+        <image src="{{item.touxiang}}" style="width: 32px; height: 32px"></image>
+        <view style="margin-left: 5px">{{item.nickname}}</view>
+      </view>
+      <van-icon name="close" color="red" data-index="{{index}}" data-id="{{item.id}}" bind:click="deldianyuan" />
+    </view>
+  </block>
+  
+  <view style="margin-top: 10px; background-color:white;padding: 10px 5px 10px 5px; margin-bottom: 50px; align-items: center" class="column">
+    <view style="color: white; text-align: center;background-color: #ed4014; padding: 5px 0px 5px 0px;width: {{ vw_width - 10}}px">请对应店员扫码添加</view>
+    <view style="margin-top: 20px;text-align: center">
+      <van-loading wx:if="{{img == ''}}" type="spinner" color="#1989fa" />
+    </view>
+    <image wx:if="{{img != ''}}" src="{{img}}" style="width: {{vw_width - 10}}px; margin-top: 10px" mode="widthFix"></image>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+/**app.wxss**/
+.page {
+  background-color: #f8f8f9
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column
+}
+
+.hang{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button",
+    "van-tag": "@vant/weapp/tag",
+    "van-search": "@vant/weapp/search"
+  },
+  "navigationBarTitleText": "商品维护"
+}

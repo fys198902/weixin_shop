@@ -1,0 +1,49 @@
+/* pages/dianpu/dianpu.wxss */
+.item{
+  width: 45vw;
+  height: 30vw + 40;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc
+}
+
+.list{
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.titalcolor{
+  padding: 0;
+  color: #ed4014;
+}
+
+.jine{
+  color: #ed4014;
+  font-size: 14px;
+}
+
+.tital{
+  font-size: 12px;
+  padding: 0px 5px 0px 5px;
+  overflow: hidden;
+}
+
+.hang{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.wuliaoimg{
+  border-radius: 5px;
+}
+
+.content{
+  padding: 5px;
+  justify-content: space-between;
+}

@@ -1,0 +1,39 @@
+function settofixed(fval) {
+  console.log(12312)
+  return fval.toFixed(2)
+}
+
+function xianshishul(fval){
+  var shul = Math.ceil( fval / 2);
+  if(shul < 4){
+    shul = 4;
+  }
+  return shul;
+}
+
+function titaljiequ(fval, shul = 11){
+  if(fval != null){
+    if (fval.length > shul){
+      return fval.substring(0, shul) + '..'
+    }else{
+      var ftmp = ''
+      for(var i=fval.length; i <= shul; i++){
+        ftmp += ' '
+      }
+      return fval + ftmp; 
+    }
+  }else{
+    return '    ';
+  }
+}
+
+function rightjiequ(fval){
+  return fval.slice(-23);
+}
+
+module.exports = {
+  settofixed: settofixed,
+  xianshishul: xianshishul,
+  titaljiequ: titaljiequ,
+  rightjiequ: rightjiequ
+}

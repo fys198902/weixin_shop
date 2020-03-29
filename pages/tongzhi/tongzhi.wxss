@@ -1,0 +1,8 @@
+/* pages/tongzhi/tongzhi.wxss */
+
+.tongzhi_column{
+  width: 45vw;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

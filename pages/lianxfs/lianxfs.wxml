@@ -1,0 +1,12 @@
+<view class="page">
+  <block wx:for="{{fdata}}" wx:key="id">
+    <view class="column" style="margin-top:5px;padding: 5px; background-color: white">
+      <view style="color: #ed4014">{{item.pianqu}}</view>
+      <view class="row" style="justify-content: space-between; padding: 5px 0px 5px 0px">
+        <view style="color: #409EFF">{{item.lianxr}}</view>
+        <view bindtap="gophone" data-phone="18113220863" style="color: #409EFF">{{item.lianxfs}}</view>
+      </view>
+    </view>
+  </block>
+
+</view>

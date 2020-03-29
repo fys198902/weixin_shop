@@ -1,0 +1,10 @@
+/* pages/wuliao/add.wxss */
+.btnclass{
+  width: 100vw;
+}
+
+.savebtn{
+  width: 100vw;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}

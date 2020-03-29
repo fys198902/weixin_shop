@@ -1,0 +1,56 @@
+<view class="page">
+  <van-cell-group>
+    <van-field value="{{ value }}" label="店铺名称" placeholder="请输入店铺名称" border="{{ true }}" bind:change="dianpunameinput" />
+    <van-field value="{{ value }}" label="商铺地址" placeholder="请输入店铺地址" border="{{ true }}" bind:change="dianpudizhiinput" />
+    <van-field value="{{ value }}" label="主营业务" placeholder="请输入主营业务" border="{{ true }}" bind:change="zhuyinginput" />
+    <van-field value="{{ value }}" label="联系人" placeholder="请输入联系人" border="{{ true }}" bind:change="lianxrinput" />
+    <van-field value="{{ value }}" label="联系方式" placeholder="请输入联系方式" border="{{ true }}" bind:change="lianxfsinput" />
+  </van-cell-group>
+
+  <view class="column" style="margin-top: 10px;background-color: white">
+    <van-uploader bind:after-read="uploadzhaopai">
+      <van-button icon="photo" type="primary" size="small" custom-style="width: {{vw_width}}px" >点击上传店铺招牌</van-button>
+    </van-uploader>
+    <view style="margin-top: 10px">
+    <van-image width="{{vw_width}}" height="{{imgheight}}" src="{{zhaopaiimg}}" />
+    </view>
+  </view>
+
+  <view class="column" style="margin-top: 10px;background-color: white">
+    <van-uploader bind:after-read="uploadshenfenzhengzheng">
+      <van-button icon="photo" type="primary" size="small" custom-style="width: {{vw_width}}px">点击上传法人身份证正面</van-button>
+    </van-uploader>
+    <view style="margin-top: 10px">
+      <van-image width="{{vw_width}}" height="{{imgheight}}" src="{{shenfenzhengzhengimg}}" />
+    </view>
+  </view>
+
+  <view class="column" style="margin-top: 10px;background-color: white">
+    <van-uploader bind:after-read="uploadshenfenzhengfan">
+      <van-button icon="photo" type="primary" size="small" custom-style="width: {{vw_width}}px">点击上传法人身份证反面</van-button>
+    </van-uploader>
+    <view style="margin-top: 10px">
+      <van-image width="{{vw_width}}" height="{{imgheight}}" src="{{shenfenzhengfanimg}}" />
+      </view>
+  </view>
+
+  <view class="column" style="margin-top: 10px;background-color: white">
+    <van-uploader bind:after-read="uploadyingyezhizhao">
+      <van-button icon="photo" type="primary" size="small" custom-style="width: {{vw_width}}px">点击上传营业执照</van-button>
+    </van-uploader>
+    <view style="margin-top: 10px">
+      <van-image width="{{vw_width}}" height="{{imgheight}}" src="{{yingyezhizhaoimg}}" />
+    </view>
+  </view>
+
+  <view class="column" style="margin-top: 10px;background-color: white">
+    <van-uploader  bind:after-read="uploadshipinjingyingxukezheng">
+      <van-button icon="photo" type="primary" size="small" custom-style="width: {{vw_width}}px">点击上传食品经营许可证</van-button>
+    </van-uploader>
+    <view style="margin-top: 10px">
+      <van-image width="{{vw_width}}" height="{{imgheight}}" src="{{shipinjingyingxukezhengimg}}"  />
+    </view>
+  </view>
+
+  <van-button icon="photo" type="primary" size="small" custom-style="margin-top: 20px; margin-bottom: 60px;width: {{vw_width}}px" bind:click="shenqing">立即申请</van-button>
+</view>

@@ -1,0 +1,5 @@
+/* pages/daisonghuo/daisonghuo.wxss */
+.jine{
+  color: #ed4014;
+  font-size: 13px;
+}

@@ -1,0 +1,28 @@
+<view class="page">
+  <van-search placeholder="请输入商品名称" use-action-slot bind:change="search">
+    <view slot="action" bind:tap="onClick"><van-button type="primary" size="small" bind:click="xinzeng" >新增</van-button></view>
+  </van-search>
+  <block wx:for="{{wuliao}}" wx:key="id">
+    <view class="row" style="padding: 5px; margin-top: 5px; background-color: white">
+      <van-image width="108px" height="108px" lazy-load vertical data-id="{{item.id}}" bind:click="goxiangxi" src="{{item.wuliaoimg}}" />
+      <view class="column" style="padding: 0px 0px 0px 5px">
+        <view class="row" style="justify-content: space-between; width: {{vw_width - 123}}px;">
+          <view>{{item.wuliaoname}}</view>
+          <view>
+            <van-tag plain type="danger" size="medium">{{item.status == 0?'下架中':'销售中'}}</van-tag>
+          </view>
+        </view>
+        <view style="font-size: 12px;color: #ccc">{{item.leibie}}</view>
+        <view style="height: 46px;font-size: 12px;color: #ccc">{{item.jianjie}}</view>
+        <view class="row" style="justify-content: space-between;">
+          <van-button type="danger" size="mini" bind:click="shangxiajia" data-index="{{index}}" data-id="{{item.id}}">{{item.status == 0?'上架':'下架'}}</van-button>
+          <van-button type="primary" size="mini" bind:click="xiugai" data-id="{{item.id}}">修改</van-button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view wx:if="{{wuliao.length == 0}}" style="background-color: white">
+    <view style="text-align: center; margin-top: 50px; color: #ccc;">暂无商品</view>
+  </view>
+</view>

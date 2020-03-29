@@ -1,0 +1,61 @@
+<view class="page">
+  <wxs module="utils" src="../../utils/utils.wxs"></wxs>
+  <view wx:if="{{status == 0}}">
+    <van-cell-group>
+      <van-field label="姓　　名" value="{{ xingm }}" placeholder="请输入您的姓名" border="{{ true }}" bind:change="xingminput" />
+      <van-field label="联系方式" value="{{ fphone }}" type="number" placeholder="请输入您的联系方式" border="{{ true }}" bind:change="fphoneinput" />
+      <van-cell-group>
+        <van-field value="{{ jingzhengyoushi }}" label="竞争优势" type="textarea" placeholder="请输入竞争优势" autosize border="{{ true }}" bind:change="jingzhengyoushiinput" />
+      </van-cell-group>
+    </van-cell-group>
+    <van-uploader file-list="{{ imgurl }}" bind:after-read="afterRead">
+      <van-button icon="photo" type="primary" custom-class="btnclass">点击此处上传您的收款码</van-button>
+    </van-uploader>
+    <image wx:if="{{imgurl != ''}}" src="{{imgurl}}" style="width: 100vw" model="widthFix" style="margin-top: 20px; margin-bottom: 10px"></image>
+
+    <van-button wx:if="{{imgurl != ''}}" type="info" bind:click="shenqingdo" custom-class="btnclass">立即申请成为合伙人</van-button>
+  </view>
+
+  <view wx:if="{{status == 2}}">
+    <view class="row" style="justify-content: flex-start;align-items: center;background-color: white;padding: 10px 5px 0px 5px;">
+      <van-image round width="48" height="48" src="{{userinfo.avatarUrl}}" bindtap="getshouquaninfo" />
+      <view class="column" style="margin-left: 10px; line-height: 18px">
+        <view style="font-size: 15px">{{userinfo.nickName}}</view>
+      </view>
+    </view>
+
+    <view class="row" style="align-items: center;background-color: white;padding: 5px;justify-content: space-around;">
+      <view class="column" style="align-items: center" bindtap="sendtixian">
+        <view class="jine">{{utils.settofixed(statusjine.yue)}}</view>
+        <view style="font-size: 12px;color: #ccc">余额/提现</view>
+      </view>
+
+      <view class="column" style="align-items: center">
+        <view class="jine">{{utils.settofixed(statusjine.zuorishouru)}}</view>
+        <view style="font-size: 10px;color: #ccc">昨日收入</view>
+      </view>
+
+      <view class="column" style="align-items: center">
+        <view class="jine">{{utils.settofixed(statusjine.zongshouru)}}</view>
+        <view style="font-size: 10px;color: #ccc">总收入</view>
+      </view>
+    </view>
+
+    <view style="margin-top: 60px; padding: 5px">
+      <van-button plain hairline type="primary" block style="margin-top: 20px" size="normal" bind:click="gotichengguize">提成规则</van-button>
+    </view>
+
+
+    <view style="margin-top: 20px; padding: 5px">
+      <van-button plain hairline type="danger" block size="normal" bind:click="gettuiguang">获取专属推广素材</van-button>
+      <view style="margin-top: 20px;margin-bottom: 50px; position:fixed;left:9000px;">
+        <canvas canvas-id="mycanvat" style="width: {{widthview}}px; height: {{heightview}}px"></canvas>
+      </view>
+    </view>
+
+    <view style="margin-top: 10px;width: 100%">
+      <image src="{{lujing}}" style="width: {{widthview}}px;height: {{heightview}}px" mode="aspectFit"></image>
+    </view>
+  </view>
+
+</view>

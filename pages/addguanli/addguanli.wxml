@@ -1,0 +1,10 @@
+<view class="page">
+  <view style="margin-top: 10px; background-color:white;padding: 5px 5px 5px 5px; margin-bottom: 10px; align-items: center" class="column">
+    <view style="color: white; text-align: center;background-color: #ed4014; padding: 5px 0px 5px 0px;width: {{vw_width - 10}}px">请对应人员扫码添加</view>
+    <view style="margin-top: 20px;text-align: center">
+      <van-loading wx:if="{{img == ''}}" type="spinner" color="#1989fa" />
+    </view>
+    
+    <image wx:if="{{img != ''}}" src="{{img}}" style="width: {{vw_width - 10}}px; margin-top: 10px" mode="widthFix" style="margin-top: 20px"></image>
+  </view>
+</view>
