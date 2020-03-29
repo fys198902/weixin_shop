@@ -107,7 +107,7 @@ Page({
       success(res) {
         wx.hideLoading()
         that.setData({
-          imgurl: 'https://jxc.xmoj.cn' + '/uploads/zhao/' + res.data.replace(/"/g, '')
+          imgurl: 'https://jxc.xmoj.cn' + '/uploads/test/' + res.data.replace(/"/g, '')
         })
       }
     });

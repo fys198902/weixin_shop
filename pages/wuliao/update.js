@@ -77,7 +77,7 @@ Page({
       success(res) {
         res = JSON.parse(res.data);
         that.setData({
-          fengmian: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src
+          fengmian: 'https://jxc.xmoj.cn/uploads/test/' + res.src
         });
       }
     });
@@ -94,7 +94,7 @@ Page({
       success(res) {
         res = JSON.parse(res.data);
         that.data.wuliaoentry.push({
-          url: 'https://jxc.xmoj.cn/uploads/zhao/' + res.src,
+          url: 'https://jxc.xmoj.cn/uploads/test/' + res.src,
           isImage: true
         });
         that.setData({
