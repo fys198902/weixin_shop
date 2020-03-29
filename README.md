@@ -1,5 +1,4 @@
-# weixin_shop
-微信小程序商城
+#微信小程序商城
 
 1、支持成为合伙人（分销商）
 
@@ -11,5 +10,5 @@
 
 4、程序界面
 
-<image src="https://jxc.xmoj.cn/img/cx_1.png"></image>
+<image src="https://jxc.xmoj.cn/img/cx_12.png"></image>
 <image src="https://jxc.xmoj.cn/img/cx_4.png"></image>
